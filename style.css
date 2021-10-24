@@ -1,0 +1,31 @@
+body{
+    background: rgb(74,213,77);
+    background: radial-gradient(circle, rgba(74,213,77,1) 16%, 
+    rgba(138,227,219,1) 54%, rgba(249,132,132,1) 89%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 400%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: body-animation 7s infinite alternate;
+    z-index: -1;
+}
+@keyframes body-animation {
+    0% {background-position: left;}
+    100% {background-position: right;}
+}
+.content {
+    color: White;
+    width: 100vh;
+    height: 50vh;
+    border-radius: 3px;
+    box-shadow: 0 0 4em rgb(0, 0, 0, 0.5);
+    background: rgb(96,252,70);
+    background: radial-gradient(circle, rgba(96,252,70,1) 1%, rgb(70, 73, 255) 77%);
+    background-repeat: no-repeat;
+    background-size: 500%;
+    animation: content-animation 10s infinite alternate;
+    z-index: 1
+}
