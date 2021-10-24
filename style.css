@@ -18,14 +18,48 @@ body{
 }
 .content {
     color: White;
-    width: 100vh;
-    height: 50vh;
+    width: 30vh;
+    height: 60vh;
     border-radius: 3px;
     box-shadow: 0 0 4em rgb(0, 0, 0, 0.5);
     background: rgb(96,252,70);
-    background: radial-gradient(circle, rgba(96,252,70,1) 1%, rgb(70, 73, 255) 77%);
+    background: radial-gradient(circle, rgb(243, 101, 76) 1%, rgb(70, 73, 255) 77%);
     background-repeat: no-repeat;
     background-size: 500%;
     animation: content-animation 10s infinite alternate;
     z-index: 1
+}
+@keyframes content-animation {
+    0% {background-position: right;}
+    100% {background-position: left;}
+}
+.content::after {
+    content: "";
+    position: absolute;
+    background: black;
+    width: 100%;
+    top:-0.25rem;
+    left: -0.25rem;
+    z-index: -1;
+}
+.winner {
+    color: rgb(8, 8, 8);
+    background: rgb(236, 247, 94);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+    padding-top: 5px;
+    box-shadow: rgb(233, 248, 26) 0px 7px 29px 0px;
+}
+.looser {
+    color: rgb(8, 8, 8);
+    background: rgb(10, 10, 10);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+    padding-top: 5px;
 }
